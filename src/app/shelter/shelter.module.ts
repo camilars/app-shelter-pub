@@ -11,6 +11,10 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ShelterRoutingModule,
     FormsModule
+  ],
+  exports: [
+    CommonModule,
+    ShelterComponent
   ]
 })
 export class ShelterModule { }

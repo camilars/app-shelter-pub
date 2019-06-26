@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer.component';
+import { EventComponent } from './event.component';
 import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [EventComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -13,7 +13,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   exports: [
     CommonModule,
-    FooterComponent
+    EventComponent
   ]
 })
-export class FooterModule { }
+export class EventModule { }
