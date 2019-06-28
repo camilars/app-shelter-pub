@@ -1,0 +1,54 @@
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-5">
+            <span class="section-heading-lower">Cadastro de Reservas</span>
+          </h2>
+          <form  #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+            <div class="form-group">
+              <label for="">Nome</label>
+              <input ngModule name="nome" #nome="ngModule" type="text" class="form-control" placeholder="Digite seu nome">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="">Email</label>
+                <input ngModule name="email" #email="ngModule" type="email" class="form-control" placeholder="Digite seu Email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="">Telefone</label>
+                <input ngModule name="telefone" #telefone="ngModule" type="tel" class="form-control" placeholder="00 12345 6789">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="">Data</label>
+                <input ngModule name="data" #data="ngModule" type="date" class="form-control">
+              </div>
+              <div class="form-group col-md-2">
+                  <label for="">Hora</label>
+                  <input ngModule name="hora" #hora="ngModule" type="time" class="form-control">
+                </div>
+              <div class="form-group col-md-6">
+                <label for="">Pessoas</label>
+                <select ngModule name="pessoas" #pessoas="ngModule" class="form-control">
+                  <option selected>mesa p/ 2</option>
+                  <option>mesa p/ 4</option>
+                  <option>mesa p/ 6</option>
+                  <option>mesa p/ 8</option>
+                  <option>mesa p/ 10</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Observações</label>
+              <textarea class="form-control" name="" id="" rows="3"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutComponent } from './about.component';
+import { EventComponent } from './event.component';
 import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { EventRoutingModule } from './event-routing.module';
 
 @NgModule({
-  declarations: [AboutComponent],
+  declarations: [EventComponent],
   imports: [
     CommonModule,
     RouterModule,
+    EventComponent,
     NgbDropdownModule
   ],
   exports: [
     CommonModule,
-    AboutComponent
+    EventRoutingModule
   ]
 })
-export class AboutModule { }
+export class EventModule { }
