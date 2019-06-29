@@ -1,1 +1,56 @@
-<h2>Test</h2>
+<section class="page-section cta">
+  <div class="container">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="cta-inner bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-lower">Faça sua reserva</span>
+            </h2>
+              <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+                  <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" name="name" [(ngModel)]="reservation.name" class="form-control" placeholder="Digite seu nome">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Email</label>
+                      <input type="email" name="email" [(ngModel)]="reservation.email" class="form-control" placeholder="Digite seu Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Telefone</label>
+                      <input type="text" name="telefone" [(ngModel)]="reservation.telefone" class="form-control" placeholder="Digite seu telefone">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label>Data</label>
+                      <input type="date" name="data" [(ngModel)]="reservation.data" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label>Hora</label>
+                      <input type="text" name="hora" [(ngModel)]="reservation.hora" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Pessoas</label>
+                      <select class="form-control" name="pessoa" [(ngModel)]="reservation.pessoa">
+                        <option selected>p/ 2 pessoas</option>
+                        <option>p/ 4 pessoas</option>
+                        <option>p/ 6 pessoas</option>
+                        <option>p/ 8 pessoas</option>
+                        <option>p/ 10 pessoas</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Observações</label>
+                    <textarea class="form-control" name="obs" [(ngModel)]="reservation.obs" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

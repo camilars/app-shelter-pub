@@ -8,10 +8,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
-
+  public reservations: any = [];
   constructor() { }
 
+  listReservation() {
+    const localReservations = localStorage.getItem('ls-reservations');
+    this.reservations = JSON.parse(localReservations);
+  }
+
+  
+
   ngOnInit() {
+    this.listReservation();
   }
 
 }

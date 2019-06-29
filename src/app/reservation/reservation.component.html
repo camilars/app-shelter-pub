@@ -1,50 +1,54 @@
-<div class="container cta">
-  <div class="title">
-    <h3>Tables</h3>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <a [routerLink]="[ '/', 'newReservation']">name</a>
-    </div>
-    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-      <h4><small>Simple With Actions</small></h4>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="text-center">#</th>
-              <th>Name</th>
-              <th>Job Position</th>
-              <th>Since</th>
-              <th class="text-right">Salary</th>
-              <th class="text-right">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">1</td>
-              <td>Andrew Mike</td>
-              <td>Develop</td>
-              <td>2013</td>
-              <td class="text-right">€ 99,225</td>
-              <td class="td-actions text-right">
-                <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title=""
-                  title="">
-                  <i class="material-icons">person</i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title=""
-                  title="">
-                  <i class="material-icons">edit</i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title=""
-                  title="">
-                  <i class="material-icons">close</i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+<section class="page-section cta">
+  <div class="container">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-12 mx-auto">
+          <div class="cta-inner bg-faded rounded p-5">
+            <div class="col-lg-8 col-md-12">
+              <h3>Lista de Reservas</h3>
+              <a [routerLink]="[ '/', 'reservation', 'newReservation']" class="btn btn-primary">Nova Reserva</a>
+            </div>
+
+            <div class="col-lg-8 col-md-12">
+                  <table class="table">
+                    <thead class="shadow-sm">
+                      <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th class="text-right">Pessoas</th>
+                        <th class="text-right">Observações</th>
+                        <th class="text-right">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let reservation of reservations">
+                        <td class="text-center">{{ reservation.id }}</td>
+                        <td>{{ reservation.name }}</td>
+                        <td>{{ reservation.email }}</td>
+                        <td>{{ reservation.telefone }}</td>
+                        <td>{{ reservation.data }}</td>
+                        <td>{{ reservation.hora}}</td>
+                        <td>{{ reservation.pessoa}}</td>
+                        <td>{{ reservation.obs}}</td>
+                        <td class="td-actions text-right">
+                          <button class="btn btn-success" [routerLink]="['/', 'reservation', reservation.id]">
+                            <span class="fa fa-edit"></span>
+                          </button>
+                          <button class="btn btn-danger" (click)="removeReservation(reservation.id)">
+                            <span class="fa fa-trash"></span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
