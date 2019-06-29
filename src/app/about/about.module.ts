@@ -11,7 +11,12 @@ import { AboutRoutingModule } from './about-routing.module';
   imports: [
     CommonModule,
     NgbDropdownModule,
+    RouterModule,
+    AboutRoutingModule
+  ],
+  exports: [
     AboutComponent
   ]
 })
 export class AboutModule { }
+

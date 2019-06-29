@@ -9,17 +9,13 @@ import { NewReservationComponent } from './new-reservation/new-reservation.compo
 
 
 @NgModule({
-  declarations: [ReservationComponent, NewReservationComponent ],
+  declarations: [ReservationComponent, NewReservationComponent],
   imports: [
     CommonModule,
     RouterModule,
     NgbDropdownModule,
-    ReservationRoutingModule,
-    FormsModule
-  ],
-  exports: [
-    CommonModule,
-    ReservationComponent
+    FormsModule,
+    ReservationRoutingModule
   ]
 })
 export class ReservationModule { }

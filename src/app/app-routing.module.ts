@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'shelter', loadChildren: './shelter/shelter.module#ShelterModule' },
   { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'event', loadChildren: './event/event.module#EventModule' },
-  { path: 'reservation', loadChildren:'./reservation/reservation.module#ReservationModule'}
+  { path: 'reservation', loadChildren:'./reservation/reservation.module#ReservationModule'},
+  { path: '**', redirectTo: '/shelter'}
 ];
 
 @NgModule({

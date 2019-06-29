@@ -10,12 +10,12 @@ import { EventRoutingModule } from './event-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    EventComponent,
-    NgbDropdownModule
+    NgbDropdownModule,
+    EventRoutingModule
   ],
   exports: [
     CommonModule,
-    EventRoutingModule
+    EventComponent
   ]
 })
 export class EventModule { }
