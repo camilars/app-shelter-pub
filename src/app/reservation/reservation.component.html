@@ -35,7 +35,7 @@
                         <td>{{ reservation.pessoa}}</td>
                         <td>{{ reservation.obs}}</td>
                         <td class="td-actions text-right">
-                          <button class="btn btn-success" [routerLink]="['/', 'reservation', reservation.id]">
+                          <button class="btn btn-success" [routerLink]="['/', 'reservation', reservation.id]" (click)="updateReservation(reservation)">
                             <span class="fa fa-edit"></span>
                           </button>
                           <button class="btn btn-danger" (click)="removeReservation(reservation.id)">

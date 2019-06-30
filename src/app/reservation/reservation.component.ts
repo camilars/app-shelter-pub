@@ -16,7 +16,17 @@ export class ReservationComponent implements OnInit {
     this.reservations = JSON.parse(localReservations);
   }
 
-  
+  removeReservation(id) {
+    let reservations = [];
+    let updateReservations = [];
+    const localReservations = localStorage.getItem('ls-reservations');
+    reservations = JSON.parse(localReservations);
+    updateReservations = reservations.filter(item => item.id !== id);
+
+    localStorage.setItem('ls-reservations', JSON.stringify(updateReservations));
+
+    this.listReservation();
+  }
 
   ngOnInit() {
     this.listReservation();

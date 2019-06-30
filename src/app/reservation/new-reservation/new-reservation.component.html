@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group col-md-2">
                       <label>Hora</label>
-                      <input type="text" name="hora" [(ngModel)]="reservation.hora" class="form-control">
+                      <input type="time" name="hora" [(ngModel)]="reservation.hora" class="form-control">
                     </div>
                     <div class="form-group col-md-6">
                       <label>Pessoas</label>
@@ -46,7 +46,8 @@
                     <label>Observações</label>
                     <textarea class="form-control" name="obs" [(ngModel)]="reservation.obs" rows="3"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  <button *ngIf="create" type="submit" class="btn btn-primary">Cadastrar</button>
+                  <button *ngIf="!create" type="submit" class="btn btn-primary">Editar</button>
                 </form>
           </div>
         </div>
